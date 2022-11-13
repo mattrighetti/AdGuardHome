@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5FA6E9EE292077380052CFAD /* AdGuardHomeClient in Frameworks */ = {isa = PBXBuildFile; productRef = 5FA6E9ED292077380052CFAD /* AdGuardHomeClient */; };
 		5FAEBEA32920522300E3518D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAEBEA22920522300E3518D /* AppDelegate.swift */; };
 		5FAEBEA52920522300E3518D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAEBEA42920522300E3518D /* SceneDelegate.swift */; };
-		5FAEBEA72920522300E3518D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAEBEA62920522300E3518D /* ViewController.swift */; };
-		5FAEBEAA2920522300E3518D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FAEBEA82920522300E3518D /* Main.storyboard */; };
+		5FAEBEA72920522300E3518D /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAEBEA62920522300E3518D /* HomeCollectionViewController.swift */; };
 		5FAEBEAC2920522400E3518D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FAEBEAB2920522400E3518D /* Assets.xcassets */; };
 		5FAEBEAF2920522400E3518D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FAEBEAD2920522400E3518D /* LaunchScreen.storyboard */; };
 		5FAEBEBA2920522400E3518D /* AdGuardHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAEBEB92920522400E3518D /* AdGuardHomeTests.swift */; };
 		5FAEBEC42920522500E3518D /* AdGuardHomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAEBEC32920522500E3518D /* AdGuardHomeUITests.swift */; };
 		5FAEBEC62920522500E3518D /* AdGuardHomeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAEBEC52920522500E3518D /* AdGuardHomeUITestsLaunchTests.swift */; };
+		5FAEBEDB2920558F00E3518D /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAEBEDA2920558F00E3518D /* Layout.swift */; };
+		5FAEBEDE292057FC00E3518D /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAEBEDD292057FC00E3518D /* MainCell.swift */; };
+		5FAEBEE0292058E500E3518D /* +UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAEBEDF292058E500E3518D /* +UIFont.swift */; };
+		5FAEBEE229205ABF00E3518D /* StatsSectionsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAEBEE129205ABF00E3518D /* StatsSectionsAdapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5FA6E9EC292077320052CFAD /* adguard-home-swift */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "adguard-home-swift"; sourceTree = "<group>"; };
 		5FAEBE9F2920522300E3518D /* AdGuardHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdGuardHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FAEBEA22920522300E3518D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FAEBEA42920522300E3518D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5FAEBEA62920522300E3518D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5FAEBEA92920522300E3518D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5FAEBEA62920522300E3518D /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
 		5FAEBEAB2920522400E3518D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FAEBEAE2920522400E3518D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5FAEBEB02920522400E3518D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +53,10 @@
 		5FAEBEBF2920522500E3518D /* AdGuardHomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdGuardHomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FAEBEC32920522500E3518D /* AdGuardHomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdGuardHomeUITests.swift; sourceTree = "<group>"; };
 		5FAEBEC52920522500E3518D /* AdGuardHomeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdGuardHomeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5FAEBEDA2920558F00E3518D /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		5FAEBEDD292057FC00E3518D /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
+		5FAEBEDF292058E500E3518D /* +UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UIFont.swift"; sourceTree = "<group>"; };
+		5FAEBEE129205ABF00E3518D /* StatsSectionsAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsSectionsAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FA6E9EE292077380052CFAD /* AdGuardHomeClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +88,12 @@
 		5FAEBE962920522300E3518D = {
 			isa = PBXGroup;
 			children = (
+				5FA6E9EC292077320052CFAD /* adguard-home-swift */,
 				5FAEBEA12920522300E3518D /* AdGuardHome */,
 				5FAEBEB82920522400E3518D /* AdGuardHomeTests */,
 				5FAEBEC22920522500E3518D /* AdGuardHomeUITests */,
 				5FAEBEA02920522300E3518D /* Products */,
+				5FAEBED5292053D100E3518D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,11 +112,11 @@
 			children = (
 				5FAEBEA22920522300E3518D /* AppDelegate.swift */,
 				5FAEBEA42920522300E3518D /* SceneDelegate.swift */,
-				5FAEBEA62920522300E3518D /* ViewController.swift */,
-				5FAEBEA82920522300E3518D /* Main.storyboard */,
+				5FAEBEDC2920559600E3518D /* Home */,
 				5FAEBEAB2920522400E3518D /* Assets.xcassets */,
 				5FAEBEAD2920522400E3518D /* LaunchScreen.storyboard */,
 				5FAEBEB02920522400E3518D /* Info.plist */,
+				5FAEBEDF292058E500E3518D /* +UIFont.swift */,
 			);
 			path = AdGuardHome;
 			sourceTree = "<group>";
@@ -127,6 +138,24 @@
 			path = AdGuardHomeUITests;
 			sourceTree = "<group>";
 		};
+		5FAEBED5292053D100E3518D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5FAEBEDC2920559600E3518D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5FAEBEA62920522300E3518D /* HomeCollectionViewController.swift */,
+				5FAEBEDA2920558F00E3518D /* Layout.swift */,
+				5FAEBEDD292057FC00E3518D /* MainCell.swift */,
+				5FAEBEE129205ABF00E3518D /* StatsSectionsAdapter.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +172,9 @@
 			dependencies = (
 			);
 			name = AdGuardHome;
+			packageProductDependencies = (
+				5FA6E9ED292077380052CFAD /* AdGuardHomeClient */,
+			);
 			productName = AdGuardHome;
 			productReference = 5FAEBE9F2920522300E3518D /* AdGuardHome.app */;
 			productType = "com.apple.product-type.application";
@@ -233,7 +265,6 @@
 			files = (
 				5FAEBEAF2920522400E3518D /* LaunchScreen.storyboard in Resources */,
 				5FAEBEAC2920522400E3518D /* Assets.xcassets in Resources */,
-				5FAEBEAA2920522300E3518D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +289,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FAEBEA72920522300E3518D /* ViewController.swift in Sources */,
+				5FAEBEE0292058E500E3518D /* +UIFont.swift in Sources */,
+				5FAEBEE229205ABF00E3518D /* StatsSectionsAdapter.swift in Sources */,
+				5FAEBEA72920522300E3518D /* HomeCollectionViewController.swift in Sources */,
+				5FAEBEDB2920558F00E3518D /* Layout.swift in Sources */,
 				5FAEBEA32920522300E3518D /* AppDelegate.swift in Sources */,
 				5FAEBEA52920522300E3518D /* SceneDelegate.swift in Sources */,
+				5FAEBEDE292057FC00E3518D /* MainCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +332,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5FAEBEA82920522300E3518D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5FAEBEA92920522300E3518D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5FAEBEAD2920522400E3518D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,19 +469,23 @@
 				INFOPLIST_FILE = AdGuardHome/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mattrighetti.AdGuardHome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -470,19 +501,23 @@
 				INFOPLIST_FILE = AdGuardHome/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mattrighetti.AdGuardHome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -602,6 +637,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5FA6E9ED292077380052CFAD /* AdGuardHomeClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AdGuardHomeClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5FAEBE972920522300E3518D /* Project object */;
 }
