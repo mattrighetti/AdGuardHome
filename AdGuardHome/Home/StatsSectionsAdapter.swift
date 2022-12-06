@@ -65,17 +65,20 @@ struct StatsSectionsAdapter {
 
     var topBlockedDomains: [StatsType] {
         let v = stats.topBlockedDomains.compactMap { getFirstEntry($0) }
-        return Array(v[..<5])
+        let maxVisible = min(5, v.count)
+        return Array(v[..<maxVisible])
     }
 
     var topQueriedDomains: [StatsType] {
         let v = stats.topQueriedDomains.compactMap { getFirstEntry($0) }
-        return Array(v[..<5])
+        let maxVisible = min(5, v.count)
+        return Array(v[..<maxVisible])
     }
 
     var topClients: [StatsType] {
         let v = stats.topClients.compactMap { getFirstEntry($0) }
-        return Array(v[..<5])
+        let maxVisible = min(5, v.count)
+        return Array(v[..<maxVisible])
     }
 
     private func getFirstEntry(_ dict: [String : Int]) -> StatsType? {

@@ -6,10 +6,20 @@
 //
 
 import UIKit
+import SwiftUI
 import AdGuardHomeClient
 
 class HomeCollectionViewController: UIViewController {
-    let account: AdGuardHomeClient = AdGuardHomeClient(ip: "10.0.20.1", username: "test", password: "test")
+    var account: AdGuardHomeClient? = {
+
+        guard
+            let name = UserDefaults.standard.string(forKey: "accountName"),
+            let passwd = UserDefaults.standard.string(forKey: "accountPassword"),
+            let ipAddr = UserDefaults.standard.string(forKey: "ipAddr")
+        else { return nil }
+
+        return AdGuardHomeClient(ip: ipAddr, username: name, password: passwd)
+    }()
 
     private lazy var collectionview: UICollectionView = {
         let cv = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewCompositionalLayout(sectionProvider: sectionProvider))
@@ -69,11 +79,24 @@ class HomeCollectionViewController: UIViewController {
         return datasource
     }()
 
+    private lazy var activityIndicator: UIActivityIndicatorView = {
+        let ai = UIActivityIndicatorView(style: .medium)
+        ai.hidesWhenStopped = true
+        return ai
+    }()
+
+    private lazy var reloadButtonItem: UIBarButtonItem = {
+        let button = UIBarButtonItem(image: UIImage(systemName: "arrow.counterclockwise.circle"), style: .plain, target: self, action: #selector(onReloadPressed))
+        return button
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "AdGuard Home"
+
+        navigationItem.rightBarButtonItem = reloadButtonItem
 
         view.addSubview(collectionview)
         collectionview.delegate = self
@@ -84,6 +107,11 @@ class HomeCollectionViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         collectionview.frame = view.bounds
+    }
+
+    @objc private func onReloadPressed() {
+        activityIndicator.startAnimating()
+        loadData()
     }
 
     private func setupDatasource(with stats: Stats) {
@@ -100,13 +128,54 @@ class HomeCollectionViewController: UIViewController {
     }
 
     private func loadData() {
+        guard let account = account else { showAccountSetupViewController(); return }
+
+        let l = loader()
         Task {
             guard let stats = await account.getStats() else { return }
             DispatchQueue.main.async {
+                self.stopLoader(loader: l)
+                self.activityIndicator.stopAnimating()
                 self.setupDatasource(with: stats)
             }
         }
     }
+
+    private func reloadAccount() {
+        guard
+            let name = UserDefaults.standard.string(forKey: "accountName"),
+            let passwd = UserDefaults.standard.string(forKey: "accountPassword"),
+            let ipAddr = UserDefaults.standard.string(forKey: "ipAddr")
+        else { return }
+
+        account = AdGuardHomeClient(ip: ipAddr, username: name, password: passwd)
+    }
+
+    private func loader() -> UIAlertController {
+        let alert = UIAlertController(title: nil, message: "Fetching data...", preferredStyle: .alert)
+        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.style = UIActivityIndicatorView.Style.medium
+        loadingIndicator.startAnimating()
+        alert.view.addSubview(loadingIndicator)
+        present(alert, animated: true, completion: nil)
+        return alert
+    }
+
+    private func stopLoader(loader : UIAlertController) {
+        DispatchQueue.main.async {
+            loader.dismiss(animated: true, completion: nil)
+        }
+    }
+
+    private func showAccountSetupViewController() {
+        let vc = UIHostingController(rootView: AccountSetupViewController(completion: { [weak self] in
+            self?.reloadAccount()
+            self?.loadData()
+        }))
+        present(vc, animated: true)
+    }
+
 }
 
 extension HomeCollectionViewController: UICollectionViewDelegate {

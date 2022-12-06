@@ -20,6 +20,7 @@
 		5FAEBEDE292057FC00E3518D /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAEBEDD292057FC00E3518D /* MainCell.swift */; };
 		5FAEBEE0292058E500E3518D /* +UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAEBEDF292058E500E3518D /* +UIFont.swift */; };
 		5FAEBEE229205ABF00E3518D /* StatsSectionsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAEBEE129205ABF00E3518D /* StatsSectionsAdapter.swift */; };
+		5FB4C56E293EADD300C9DFE2 /* AccountSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB4C56D293EADD300C9DFE2 /* AccountSetupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		5FAEBEDD292057FC00E3518D /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		5FAEBEDF292058E500E3518D /* +UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UIFont.swift"; sourceTree = "<group>"; };
 		5FAEBEE129205ABF00E3518D /* StatsSectionsAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsSectionsAdapter.swift; sourceTree = "<group>"; };
+		5FB4C56D293EADD300C9DFE2 /* AccountSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSetupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				5FAEBEDA2920558F00E3518D /* Layout.swift */,
 				5FAEBEDD292057FC00E3518D /* MainCell.swift */,
 				5FAEBEE129205ABF00E3518D /* StatsSectionsAdapter.swift */,
+				5FB4C56D293EADD300C9DFE2 /* AccountSetupViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FB4C56E293EADD300C9DFE2 /* AccountSetupViewController.swift in Sources */,
 				5FAEBEE0292058E500E3518D /* +UIFont.swift in Sources */,
 				5FAEBEE229205ABF00E3518D /* StatsSectionsAdapter.swift in Sources */,
 				5FAEBEA72920522300E3518D /* HomeCollectionViewController.swift in Sources */,

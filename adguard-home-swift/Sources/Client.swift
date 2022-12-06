@@ -7,6 +7,11 @@
 
 import Foundation
 
+public protocol CredentialsProvider {
+    var username: String { get set }
+    var password: String { get set }
+}
+
 public final class AdGuardHomeClient {
     public let ip: String
     private let username: String
